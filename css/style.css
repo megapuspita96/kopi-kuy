@@ -1,0 +1,347 @@
+/* Pengaturan Global */
+
+/* Mendaftarkan font ke dalam CSS, dan memberi nama family */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/poppins.woff2);
+ }
+ 
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ html {
+    /* agar scroll ketika klik pada navigasi menjadi halus */
+    scroll-behavior: smooth;
+ }
+ 
+ body {
+    /* mendaftarkan semua teks pada body menjadi family Poppins */
+    font-family: 'Poppins';
+ }
+
+ .baris {
+   /* 
+      display: flex memiliki pengaturan yang dapat mengatur agar elemen
+      di dalamnya memiliki ukuran yang fleksibel
+   */
+   display: flex;
+
+   /* 
+      align-items: center mengatur elemen di dalamnya rata tengah vertikal
+   */
+   align-items: center;
+
+   /* 
+      justify-content: center mengatur elemen di dalamnya rata tengah horizontal
+   */
+   justify-content: center;
+
+   /* 
+      flex-wrap: wrap mengatur agar jika panjang elemen berlebih, maka elemen
+      akan otomatis diletakan di baris baru
+   */
+   flex-wrap: wrap;
+}
+ 
+ a {
+    /* menghilangkan garis bawah pada link */
+    text-decoration: none;
+ 
+    /* menghilangkan warna bawaan pada link */
+    color: unset;
+ }
+ 
+ h2 {
+    /* mengatur ukuran huruf ke 34 pixel */
+    font-size: 30px;
+ }
+
+ h3 {
+    /* mengatur ukuran huruf ke 1.2rem */
+    font-size: 1.2rem;
+ }
+ 
+ h1,
+ h2,
+ h3 {
+    /* mengatur tebal huruf */
+    font-weight: bold;
+    
+ }
+ 
+ img {
+    /* 
+       mengatur agar semua elemen img memiliki panjang maksimal 100% agar
+       tidak besar gambar tidak melebihi layar ataupun pembungkus
+    */
+    max-width: 100%;
+ }
+
+
+/* Navbar */
+
+nav.navbar {
+   position: fixed;
+   z-index: 10;
+   width: 100%;
+}
+
+a.btn-color,
+a.btn-color:hover {
+   background-color:rgb(238, 124, 17); 
+}
+
+.logo {
+    height: 60px;
+    margin-left: 20px;
+ }
+
+/* Header */
+   
+ header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/header/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+ }
+
+ header .baris {
+   width: 100%;
+   flex-wrap: nowrap;
+   padding-top: 80px;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .col-kanan {
+   width: 50%;
+ }
+ .col-kiri {
+   width: 50%;
+   color: #fff;
+   text-align: center;
+ }
+
+ .judul-header {
+    color: rgb(238, 124, 17);
+    text-align: center;
+ }
+
+ .icon-kopi {
+   margin-left: 1rem;
+ }
+
+ .header-wrapper {
+    position: absolute;
+    background-color:black;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+    opacity: 95%;
+    z-index: 3;
+    display: flex;
+ }
+
+
+ img.col-kanan {
+   width: 35%;
+}
+
+ /* Best seller */
+
+ .best-seller {
+   margin-top: 90px;
+   padding: 0px 5%;
+   display: flex;
+   flex-direction: column;
+   
+ }
+
+ .text-best-seller {
+   text-align: center;
+   margin-bottom: 20px;
+ }
+
+ .baris-seller {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .card-body {
+   background-color:rgb(238, 124, 17) ;
+ }
+ .card-title {
+   width: 50%;
+   
+ }
+
+ /* Our team */
+ .our-team {
+   background-color: #EEE6DC;
+   box-shadow: inset 0px 0px 23px -6px #707070;
+   margin-top: 80px;
+   padding: 0px 3%;
+   background-color: rgb(238, 124, 17) ;
+   padding-top: 50px;
+   color: white;
+   text-align: center;
+}
+
+.judul-team {
+   margin-bottom: 20px;
+}
+
+.subjudul-team {
+   margin-bottom: 30px;
+   font-size: 18px;
+   width: 100px;
+   max-width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.col-team {
+   width: 25%;
+   padding: 20px;
+}
+
+.col-team img {
+   box-shadow: 0 3px 10px -2px #000;
+   border-radius: 50px 0px 50px 0px;
+}
+
+/* Review */
+.review {
+   background-image: url(../images/bg-review.svg);
+   /* 
+      background-size: contain;
+      membuat gambar latar belakang tidak terpotong
+   */
+   background-size: contain;
+
+   /* 
+      background-repeat: no-repeat;
+      membuat gambar latar belakang tidak diulang (duplikat)
+   */
+   background-repeat: no-repeat;
+   padding-left: 20px;
+   padding-right: 20px;
+   margin-top: 80px;
+   text-align: center;
+}
+
+.judul-review {
+   margin-bottom: 20px;
+}
+
+.subjudul-review {
+   margin-bottom: 40px;
+   font-size: 18px;
+}
+
+.review .baris {
+   justify-content: space-around;
+   /* align-items: stretch; membuat tinggi elemen di dalam .review .baris seragam */
+   align-items: stretch;
+}
+
+.col-review {
+   width: 30%;
+   padding: 35px 50px;
+   box-shadow: 0px 0px 12px -10px #000;
+   background-color: #fff;
+}
+
+.profile {
+   display: flex;
+   margin-bottom: 30px;
+   align-items: center;
+}
+
+/* mengatur elemen img yang ada di dalam class(.) profile */
+.profile img {
+   width: 100px;
+   margin-right: 20px;
+}
+
+.profile .nama-profile {
+   text-align: left;
+}
+
+/* Contact */
+.contact-us {
+   margin-top: 50px;
+   padding-top: 50px;
+   background-color:rgb(238, 124, 17);
+   text-align: center;
+   color: #fff;
+}
+
+.col-kontak {
+   width: 30%;
+   margin-top: 50px;
+   /* color mengatur warna tulisan */
+   color: white
+}
+
+/* Footer */
+footer {
+   background-color: black;
+   color: #fff;
+   padding: 10px;
+}
+
+footer .navigasi {
+  
+   margin-right: auto;
+}
+
+.navigasi a {
+   text-decoration: none;
+   color: #fff;
+}
+
+ 
+ /* UNTUK RESPONSIF DI BAWAH */
+ @media (max-width:800px) {
+   .navigasi {
+      display: none;
+   }
+   .logo {
+      margin-right: auto;
+   }
+   .shop {
+      margin-right: 35px;
+   }
+   .col-kiri {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+   }
+   .col-kanan {
+      display: none;
+   }
+   .col-produk {
+      width: 50%;
+   }
+   .col-team {
+      width: 50%;
+   }
+   .col-review {
+      width: 100%;
+      margin-bottom: 30px;
+   }
+   .col-kontak {
+      width: 30%;
+      
+   }
+}
